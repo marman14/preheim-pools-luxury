@@ -307,6 +307,12 @@ export const CITIES_SERVED_LIST = [
   "Laton", "Madera", "Madera Ranchos", "Farmersville", "Exeter",
 ];
 
+export const CITIES_SERVED: CityItem[] = CITIES_SERVED_LIST.map((cityName) => ({
+  name: cityName,
+  isHomeBase: cityName === "Reedley",
+  highlighted: ["Reedley", "Fresno", "Clovis", "Visalia", "Hanford", "Dinuba", "Selma", "Kingsburg"].includes(cityName),
+}));
+
 export const REVIEWS: ReviewItem[] = [
   {
     name: "Vicki Worthley",

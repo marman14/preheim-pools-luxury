@@ -12,7 +12,7 @@ export default function FloatingActions() {
     const shareData = {
       title: 'Preheim Pools & Construction',
       text: 'Professional pool construction, maintenance, and outdoor living in Central Valley, CA. CSLB #1023444.',
-      url: typeof window !== 'undefined' ? window.location.href : 'https://preheim-pools.vercel.app',
+      url: typeof window !== 'undefined' ? window.location.href : 'https://preheim-pools-luxury.vercel.app',
     };
 
     if (typeof navigator !== 'undefined' && navigator.share) {
@@ -55,7 +55,7 @@ export default function FloatingActions() {
         <a
           href={`tel:${BUSINESS_INFO.phoneRaw}`}
           aria-label="Call Preheim Pools"
-          className="group relative flex items-center h-11 w-11 sm:h-12 sm:w-12 sm:hover:w-36 rounded-r-2xl sm:rounded-r-full bg-[#1a73e8] hover:bg-[#1557b0] text-white shadow-[0_4px_14px_rgba(0,0,0,0.22)] hover:shadow-[0_6px_22px_rgba(26,115,232,0.45)] transition-all duration-300 ease-[cubic-bezier(0.4,0,0.2,1)] overflow-hidden pl-3"
+          className="group relative flex items-center h-11 w-11 sm:h-12 sm:w-12 sm:hover:w-36 rounded-r-2xl sm:rounded-r-full bg-[#1a73e8] hover:bg-[#1557b0] text-white shadow-[0_4px_14px_rgba(0,0,0,0.22)] hover:shadow-[0_8px_24px_rgba(26,115,232,0.45)] hover:-translate-y-[3px] transition-all duration-300 ease-[cubic-bezier(0.4,0,0.2,1)] overflow-hidden pl-3"
         >
           <span className="flex items-center justify-center w-5 h-5 flex-shrink-0">
             <svg
@@ -82,7 +82,7 @@ export default function FloatingActions() {
           target="_blank"
           rel="noopener noreferrer"
           aria-label="Chat on WhatsApp"
-          className="group relative flex items-center h-11 w-11 sm:h-12 sm:w-12 sm:hover:w-36 rounded-r-2xl sm:rounded-r-full bg-[#25d366] hover:bg-[#1da851] text-white shadow-[0_4px_14px_rgba(0,0,0,0.22)] hover:shadow-[0_6px_22px_rgba(37,211,102,0.45)] transition-all duration-300 ease-[cubic-bezier(0.4,0,0.2,1)] overflow-hidden pl-3"
+          className="group relative flex items-center h-11 w-11 sm:h-12 sm:w-12 sm:hover:w-36 rounded-r-2xl sm:rounded-r-full bg-[#25d366] hover:bg-[#1da851] text-white shadow-[0_4px_14px_rgba(0,0,0,0.22)] hover:shadow-[0_8px_24px_rgba(37,211,102,0.45)] hover:-translate-y-[3px] transition-all duration-300 ease-[cubic-bezier(0.4,0,0.2,1)] overflow-hidden pl-3"
         >
           <span className="flex items-center justify-center w-5 h-5 flex-shrink-0">
             <svg
@@ -104,7 +104,7 @@ export default function FloatingActions() {
           href="#contact"
           onClick={handleQuoteClick}
           aria-label="Get a Quote"
-          className="group relative flex items-center h-11 w-11 sm:h-12 sm:w-12 sm:hover:w-36 rounded-r-2xl sm:rounded-r-full bg-[#ea4335] hover:bg-[#c5221f] text-white shadow-[0_4px_14px_rgba(0,0,0,0.22)] hover:shadow-[0_6px_22px_rgba(234,67,53,0.45)] transition-all duration-300 ease-[cubic-bezier(0.4,0,0.2,1)] overflow-hidden pl-3"
+          className="group relative flex items-center h-11 w-11 sm:h-12 sm:w-12 sm:hover:w-36 rounded-r-2xl sm:rounded-r-full bg-[#ea4335] hover:bg-[#c5221f] text-white shadow-[0_4px_14px_rgba(0,0,0,0.22)] hover:shadow-[0_8px_24px_rgba(234,67,53,0.45)] hover:-translate-y-[3px] transition-all duration-300 ease-[cubic-bezier(0.4,0,0.2,1)] overflow-hidden pl-3"
         >
           <span className="flex items-center justify-center w-5 h-5 flex-shrink-0">
             <svg
@@ -135,7 +135,7 @@ export default function FloatingActions() {
           target="_blank"
           rel="noopener noreferrer"
           aria-label="Leave a Google Review"
-          className="group relative flex items-center h-11 w-11 sm:h-12 sm:w-12 sm:hover:w-36 rounded-r-2xl sm:rounded-r-full bg-[#f9ab00] hover:bg-[#e89e00] text-slate-900 shadow-[0_4px_14px_rgba(0,0,0,0.22)] hover:shadow-[0_6px_22px_rgba(249,171,0,0.45)] transition-all duration-300 ease-[cubic-bezier(0.4,0,0.2,1)] overflow-hidden pl-3"
+          className="group relative flex items-center h-11 w-11 sm:h-12 sm:w-12 sm:hover:w-36 rounded-r-2xl sm:rounded-r-full bg-[#f9ab00] hover:bg-[#e89e00] text-slate-900 shadow-[0_4px_14px_rgba(0,0,0,0.22)] hover:shadow-[0_8px_24px_rgba(249,171,0,0.45)] hover:-translate-y-[3px] transition-all duration-300 ease-[cubic-bezier(0.4,0,0.2,1)] overflow-hidden pl-3"
         >
           <span className="flex items-center justify-center w-5 h-5 flex-shrink-0">
             <svg
@@ -161,7 +161,7 @@ export default function FloatingActions() {
           onClick={handleShare}
           type="button"
           aria-label="Share Page"
-          className="group relative flex items-center h-11 w-11 sm:h-12 sm:w-12 sm:hover:w-36 rounded-r-2xl sm:rounded-r-full bg-[#34a853] hover:bg-[#2d7a3a] text-white shadow-[0_4px_14px_rgba(0,0,0,0.22)] hover:shadow-[0_6px_22px_rgba(52,168,83,0.45)] transition-all duration-300 ease-[cubic-bezier(0.4,0,0.2,1)] overflow-hidden pl-3 cursor-pointer text-left"
+          className="group relative flex items-center h-11 w-11 sm:h-12 sm:w-12 sm:hover:w-36 rounded-r-2xl sm:rounded-r-full bg-[#34a853] hover:bg-[#2d7a3a] text-white shadow-[0_4px_14px_rgba(0,0,0,0.22)] hover:shadow-[0_8px_24px_rgba(52,168,83,0.45)] hover:-translate-y-[3px] transition-all duration-300 ease-[cubic-bezier(0.4,0,0.2,1)] overflow-hidden pl-3 cursor-pointer text-left"
         >
           <span className="flex items-center justify-center w-5 h-5 flex-shrink-0">
             {copied ? (
@@ -193,7 +193,7 @@ export default function FloatingActions() {
 
       {/* Toast Notification when Copied */}
       {copied && (
-        <div className="fixed bottom-6 left-1/2 -translate-x-1/2 z-50 bg-slate-900/95 backdrop-blur-md text-white text-xs sm:text-sm font-medium px-4 py-2.5 rounded-full shadow-2xl flex items-center space-x-2 animate-in fade-in slide-in-from-bottom-2 duration-300">
+        <div className="fixed bottom-6 left-1/2 -translate-x-1/2 z-50 bg-[#0f172a]/95 backdrop-blur-md text-white text-xs sm:text-sm font-medium px-4 py-2.5 rounded-full shadow-2xl flex items-center space-x-2 animate-in fade-in slide-in-from-bottom-2 duration-300">
           <Check className="w-4 h-4 text-emerald-400" />
           <span>Website link copied to clipboard!</span>
         </div>

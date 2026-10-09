@@ -37,18 +37,18 @@ export default function GalleryGrid() {
   }, [isLightboxOpen]);
 
   return (
-    <section id="gallery" className="py-28 sm:py-36 bg-white relative">
+    <section id="gallery" className="py-20 sm:py-28 bg-[#f8fafc] relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
-        <div className="text-center max-w-3xl mx-auto mb-20">
-          <div className="inline-flex items-center space-x-2 px-3.5 py-1.5 rounded-full bg-sky-100 text-sky-800 text-xs font-bold tracking-wider uppercase mb-4 shadow-xs">
-            <Sparkles className="w-3.5 h-3.5 text-sky-600" />
+        <div className="text-center max-w-2xl mx-auto mb-16">
+          <div className="inline-flex items-center space-x-2 px-3.5 py-1.5 rounded-full bg-[#e0f2fe] text-[#0284c7] text-xs font-bold tracking-wider uppercase mb-4">
+            <Sparkles className="w-3.5 h-3.5 text-[#0284c7]" />
             <span>Master Portfolio</span>
           </div>
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-900 tracking-tight mb-4">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#0f172a] tracking-tight mb-4">
             Craftsmanship in Action
           </h2>
-          <p className="text-base sm:text-lg text-slate-600 font-normal leading-[1.75] max-w-xl mx-auto">
+          <p className="text-base sm:text-lg text-slate-600 font-normal leading-[1.7] max-w-xl mx-auto">
             A curated showcase of recent gunite pool builds, custom spas, and luxury replastering projects across Central Valley.
           </p>
         </div>
@@ -59,7 +59,7 @@ export default function GalleryGrid() {
             <div
               key={photo.id}
               onClick={() => openLightbox(idx)}
-              className="group relative rounded-3xl overflow-hidden bg-slate-100 border border-slate-200/80 shadow-[0_8px_25px_rgba(0,0,0,0.04)] hover:shadow-[0_16px_40px_rgba(2,132,199,0.15)] transition-all duration-300 hover:-translate-y-1 cursor-pointer"
+              className="group relative rounded-3xl overflow-hidden bg-white border border-slate-200/90 shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-[4px] cursor-pointer"
             >
               <div className="relative aspect-[4/3] w-full overflow-hidden">
                 <img
@@ -94,9 +94,9 @@ export default function GalleryGrid() {
         <div className="text-center">
           <button
             onClick={() => openLightbox(0)}
-            className="inline-flex items-center space-x-2 px-8 py-3.5 bg-slate-900 hover:bg-sky-600 text-white rounded-2xl font-bold text-sm tracking-wide shadow-md transition-all duration-200 hover:shadow-lg active:scale-95"
+            className="inline-flex items-center space-x-2 px-8 py-4 bg-[#0284c7] hover:bg-[#0369a1] text-white rounded-2xl font-bold text-sm tracking-wide shadow-md transition-all duration-300 hover:-translate-y-[3px] hover:shadow-xl active:translate-y-0"
           >
-            <Images className="w-4 h-4 text-sky-400" />
+            <Images className="w-4 h-4 text-cyan-200" />
             <span>Browse Full Portfolio (49 Project Photos)</span>
           </button>
         </div>

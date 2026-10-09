@@ -125,7 +125,7 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }}
         />
       </head>
-      <body className="bg-white text-slate-800 antialiased selection:bg-sky-100 selection:text-sky-800">
+      <body className="bg-white text-[#0f172a] antialiased selection:bg-[#e0f2fe] selection:text-[#0284c7]">
         {children}
       </body>
     </html>

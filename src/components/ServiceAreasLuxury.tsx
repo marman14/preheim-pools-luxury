@@ -12,18 +12,18 @@ export default function ServiceAreasLuxury() {
   );
 
   return (
-    <section id="service-areas" className="py-28 sm:py-36 bg-white relative">
+    <section id="service-areas" className="py-20 sm:py-28 bg-white relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
-        <div className="text-center max-w-3xl mx-auto mb-16">
-          <div className="inline-flex items-center space-x-2 px-3.5 py-1.5 rounded-full bg-sky-100 text-sky-800 text-xs font-bold tracking-wider uppercase mb-4 shadow-xs">
-            <MapPin className="w-3.5 h-3.5 text-sky-600" />
+        <div className="text-center max-w-2xl mx-auto mb-16">
+          <div className="inline-flex items-center space-x-2 px-3.5 py-1.5 rounded-full bg-[#e0f2fe] text-[#0284c7] text-xs font-bold tracking-wider uppercase mb-4">
+            <MapPin className="w-3.5 h-3.5 text-[#0284c7]" />
             <span>Central Valley Service Routes</span>
           </div>
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-900 tracking-tight mb-4">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#0f172a] tracking-tight mb-4">
             Serving 20+ Communities
           </h2>
-          <p className="text-base sm:text-lg text-slate-600 font-normal leading-[1.75] max-w-2xl mx-auto">
+          <p className="text-base sm:text-lg text-slate-600 font-normal leading-[1.7] max-w-xl mx-auto">
             Headquartered in Reedley, CA, our crews service homeowners across Fresno, Tulare, and Kings Counties with reliable pool construction, replastering, and chemistry maintenance.
           </p>
         </div>
@@ -36,7 +36,7 @@ export default function ServiceAreasLuxury() {
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
             placeholder="Search your city (e.g., Fresno, Clovis, Visalia)..."
-            className="w-full pl-12 pr-4 py-3.5 bg-slate-50 border border-slate-200/90 rounded-2xl text-sm text-slate-800 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-sky-500/40 focus:bg-white transition-all shadow-xs"
+            className="w-full pl-12 pr-4 py-3.5 bg-[#f8fafc] border border-slate-200/90 rounded-2xl text-sm text-[#0f172a] placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-[#0284c7] focus:bg-white transition-all shadow-xs"
           />
         </div>
 
@@ -47,47 +47,47 @@ export default function ServiceAreasLuxury() {
               key={idx}
               className={`p-4 rounded-2xl border transition-all duration-200 flex items-center space-x-2.5 ${
                 city.isHomeBase
-                  ? 'bg-sky-600 text-white border-sky-600 shadow-md shadow-sky-600/20'
+                  ? 'bg-[#0284c7] text-white border-[#0284c7] shadow-sm'
                   : city.highlighted
-                  ? 'bg-sky-50/80 border-sky-200/80 text-sky-900 font-semibold'
-                  : 'bg-slate-50/70 hover:bg-white border-slate-200/80 text-slate-700 hover:shadow-xs'
+                  ? 'bg-[#e0f2fe] border-sky-200 text-[#0284c7] font-semibold'
+                  : 'bg-[#f8fafc] hover:bg-white border-slate-200/90 text-slate-700 hover:shadow-sm'
               }`}
             >
               {city.isHomeBase ? (
                 <Building2 className="w-4 h-4 text-white flex-shrink-0" />
               ) : (
-                <MapPin className="w-4 h-4 text-sky-500 flex-shrink-0" />
+                <MapPin className="w-4 h-4 text-[#0284c7] flex-shrink-0" />
               )}
               <div className="flex flex-col">
                 <span className="text-xs sm:text-sm font-bold truncate">{city.name}</span>
                 {city.isHomeBase && (
-                  <span className="text-[10px] text-sky-200 font-medium">Headquarters</span>
+                  <span className="text-[10px] text-sky-100 font-medium">Headquarters</span>
                 )}
               </div>
             </div>
           ))}
         </div>
 
-        {/* Route Inquiries Banner */}
-        <div className="bg-gradient-to-r from-slate-900 via-sky-950 to-slate-900 rounded-3xl p-8 sm:p-12 text-white text-center max-w-4xl mx-auto shadow-xl relative overflow-hidden">
+        {/* Route Inquiries Banner (Clean Light Luxury Card - Zero Dark Blocks) */}
+        <div className="bg-[#f8fafc] border border-slate-200/90 rounded-3xl p-8 sm:p-12 text-[#0f172a] text-center max-w-4xl mx-auto shadow-sm relative overflow-hidden">
           <div className="relative z-10">
-            <h3 className="text-2xl sm:text-3xl font-extrabold mb-3">
+            <h3 className="text-2xl sm:text-3xl font-extrabold text-[#0f172a] mb-3">
               Don&apos;t See Your Location Listed?
             </h3>
-            <p className="text-sm sm:text-base text-slate-300 font-normal leading-relaxed max-w-xl mx-auto mb-8">
+            <p className="text-sm sm:text-base text-slate-600 font-normal leading-[1.7] max-w-xl mx-auto mb-8">
               We frequently travel throughout rural Fresno, Tulare, and Kings counties for custom pool builds and major resurfacing projects. Call us directly to confirm service availability.
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
               <a
                 href={`tel:${BUSINESS_INFO.phoneRaw}`}
-                className="w-full sm:w-auto px-7 py-3.5 bg-white text-slate-900 hover:bg-sky-50 rounded-xl font-bold text-sm transition-all flex items-center justify-center space-x-2 shadow-md"
+                className="w-full sm:w-auto px-7 py-3.5 bg-white text-[#0f172a] hover:text-[#0284c7] border border-slate-200 hover:border-sky-300 rounded-xl font-bold text-sm transition-all duration-300 hover:-translate-y-[2px] flex items-center justify-center space-x-2 shadow-xs"
               >
-                <Phone className="w-4 h-4 text-sky-600" />
+                <Phone className="w-4 h-4 text-[#0284c7]" />
                 <span>Call (559) 393-7981</span>
               </a>
               <a
                 href="#contact"
-                className="w-full sm:w-auto px-7 py-3.5 bg-sky-600 hover:bg-sky-500 text-white rounded-xl font-bold text-sm transition-all flex items-center justify-center space-x-2"
+                className="w-full sm:w-auto px-7 py-3.5 bg-[#0284c7] hover:bg-[#0369a1] text-white rounded-xl font-bold text-sm transition-all duration-300 hover:-translate-y-[2px] flex items-center justify-center space-x-2 shadow-sm"
               >
                 <span>Request Service Inquiry</span>
                 <ArrowRight className="w-4 h-4" />

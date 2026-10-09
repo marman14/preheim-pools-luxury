@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useState } from 'react';
-import { Calculator, CheckCircle2, ArrowRight, ShieldCheck, Sparkles, Send, Phone } from 'lucide-react';
+import { Calculator, CheckCircle2, ArrowRight, ShieldCheck, Sparkles, Phone } from 'lucide-react';
 import { BUSINESS_INFO } from '@/data/businessData';
 
 interface ServiceOption {
@@ -41,7 +41,6 @@ export default function EstimateCalculator() {
   const [customerInfo, setCustomerInfo] = useState({
     name: '',
     phone: '',
-    email: '',
     city: '',
   });
 
@@ -72,28 +71,28 @@ export default function EstimateCalculator() {
   };
 
   return (
-    <section id="estimate-calculator" className="py-24 sm:py-32 bg-gradient-to-b from-white via-sky-50/40 to-slate-50 relative overflow-hidden">
+    <section id="estimate-calculator" className="py-20 sm:py-28 bg-[#f8fafc] relative overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Section Header */}
-        <div className="text-center max-w-3xl mx-auto mb-16">
-          <div className="inline-flex items-center space-x-2 px-3.5 py-1.5 rounded-full bg-sky-100 text-sky-800 text-xs font-bold tracking-wider uppercase mb-4 shadow-sm">
-            <Calculator className="w-3.5 h-3.5 text-sky-600" />
+        <div className="text-center max-w-2xl mx-auto mb-16">
+          <div className="inline-flex items-center space-x-2 px-3.5 py-1.5 rounded-full bg-[#e0f2fe] text-[#0284c7] text-xs font-bold tracking-wider uppercase mb-4">
+            <Calculator className="w-3.5 h-3.5 text-[#0284c7]" />
             <span>Instant Cost Estimator</span>
           </div>
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-900 tracking-tight mb-4">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#0f172a] tracking-tight mb-4">
             Interactive Pool Project Estimator
           </h2>
-          <p className="text-base sm:text-lg text-slate-600 font-normal leading-relaxed max-w-2xl mx-auto">
+          <p className="text-base sm:text-lg text-slate-600 font-normal leading-[1.7] max-w-xl mx-auto">
             Select your pool service, dimensions, and custom upgrades to get an instant realistic estimate range from a licensed Central Valley contractor.
           </p>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 max-w-6xl mx-auto items-start">
           {/* Controls Column */}
-          <div className="lg:col-span-7 bg-white rounded-3xl p-6 sm:p-9 border border-slate-200/80 shadow-xl space-y-8">
+          <div className="lg:col-span-7 bg-white rounded-3xl p-6 sm:p-9 border border-slate-200/90 shadow-sm space-y-8">
             {/* Step 1: Service Type */}
             <div>
-              <label className="block text-xs font-bold uppercase tracking-wider text-slate-400 mb-3">
+              <label className="block text-xs font-bold uppercase tracking-wider text-slate-500 mb-3">
                 1. Select Pool Service Needed
               </label>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
@@ -104,13 +103,13 @@ export default function EstimateCalculator() {
                     onClick={() => setSelectedService(svc.id)}
                     className={`p-3.5 text-left rounded-2xl border text-xs sm:text-sm font-semibold transition-all duration-200 flex items-center justify-between ${
                       selectedService === svc.id
-                        ? 'border-sky-500 bg-sky-50/80 text-sky-900 shadow-sm ring-1 ring-sky-500'
-                        : 'border-slate-200 hover:border-slate-300 text-slate-700 bg-white hover:bg-slate-50/50'
+                        ? 'border-[#0284c7] bg-[#e0f2fe] text-[#0284c7] shadow-sm ring-1 ring-[#0284c7]'
+                        : 'border-slate-200 hover:border-slate-300 text-slate-700 bg-white hover:bg-slate-50'
                     }`}
                   >
                     <span>{svc.name}</span>
                     {selectedService === svc.id && (
-                      <CheckCircle2 className="w-4 h-4 text-sky-600 flex-shrink-0 ml-2" />
+                      <CheckCircle2 className="w-4 h-4 text-[#0284c7] flex-shrink-0 ml-2" />
                     )}
                   </button>
                 ))}
@@ -119,7 +118,7 @@ export default function EstimateCalculator() {
 
             {/* Step 2: Pool Size */}
             <div>
-              <label className="block text-xs font-bold uppercase tracking-wider text-slate-400 mb-3">
+              <label className="block text-xs font-bold uppercase tracking-wider text-slate-500 mb-3">
                 2. Approximate Pool Basin Size
               </label>
               <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
@@ -130,8 +129,8 @@ export default function EstimateCalculator() {
                     onClick={() => setSelectedSize(size.id)}
                     className={`p-4 text-center rounded-2xl border transition-all duration-200 ${
                       selectedSize === size.id
-                        ? 'border-sky-500 bg-sky-50/80 text-sky-900 shadow-sm ring-1 ring-sky-500'
-                        : 'border-slate-200 hover:border-slate-300 text-slate-700 bg-white hover:bg-slate-50/50'
+                        ? 'border-[#0284c7] bg-[#e0f2fe] text-[#0284c7] shadow-sm ring-1 ring-[#0284c7]'
+                        : 'border-slate-200 hover:border-slate-300 text-slate-700 bg-white hover:bg-slate-50'
                     }`}
                   >
                     <span className="block font-bold text-sm mb-1">{size.label}</span>
@@ -144,7 +143,7 @@ export default function EstimateCalculator() {
             {/* Step 3: Upgrades (Relevant for construction & replaster) */}
             {(selectedService === 'replaster' || selectedService === 'construction') && (
               <div>
-                <label className="block text-xs font-bold uppercase tracking-wider text-slate-400 mb-3">
+                <label className="block text-xs font-bold uppercase tracking-wider text-slate-500 mb-3">
                   3. Optional Custom Add-ons &amp; Finishes
                 </label>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
@@ -157,7 +156,7 @@ export default function EstimateCalculator() {
                         onClick={() => toggleUpgrade(upgrade.id)}
                         className={`p-3 text-left rounded-2xl border text-xs font-medium transition-all duration-200 flex items-center justify-between ${
                           isSelected
-                            ? 'border-sky-500 bg-sky-50/60 text-sky-900 font-semibold'
+                            ? 'border-[#0284c7] bg-[#e0f2fe] text-[#0f172a] font-semibold'
                             : 'border-slate-200 hover:border-slate-300 text-slate-600 bg-white'
                         }`}
                       >
@@ -165,7 +164,7 @@ export default function EstimateCalculator() {
                         <div
                           className={`w-4 h-4 rounded-md flex items-center justify-center flex-shrink-0 ml-2 border ${
                             isSelected
-                              ? 'bg-sky-600 border-sky-600 text-white'
+                              ? 'bg-[#0284c7] border-[#0284c7] text-white'
                               : 'border-slate-300 bg-white'
                           }`}
                         >
@@ -179,57 +178,55 @@ export default function EstimateCalculator() {
             )}
           </div>
 
-          {/* Result & Lead Box Column */}
-          <div className="lg:col-span-5 bg-gradient-to-br from-slate-900 via-sky-950 to-slate-900 rounded-3xl p-7 sm:p-9 text-white shadow-2xl relative overflow-hidden">
-            <div className="absolute top-0 right-0 w-64 h-64 bg-sky-500/10 rounded-full blur-3xl pointer-events-none" />
-
+          {/* Result & Lead Box Column (Clean Light Luxury Card - Zero Dark Blocks) */}
+          <div className="lg:col-span-5 bg-white rounded-3xl p-7 sm:p-9 text-slate-800 border-2 border-sky-300 shadow-xl relative overflow-hidden">
             <div className="relative z-10">
-              <span className="text-xs font-bold uppercase tracking-widest text-sky-400 block mb-2">
+              <span className="text-xs font-bold uppercase tracking-widest text-[#0284c7] block mb-2">
                 Estimated Investment
               </span>
 
               <div className="mb-4">
-                <div className="text-3xl sm:text-4xl font-extrabold tracking-tight text-white">
+                <div className="text-3xl sm:text-4xl font-extrabold tracking-tight text-[#0f172a]">
                   ${totalMin.toLocaleString()} – ${totalMax.toLocaleString()}
-                  <span className="text-sm font-normal text-sky-200 ml-2">
+                  <span className="text-sm font-normal text-slate-500 ml-2">
                     / {currentService.unit}
                   </span>
                 </div>
-                <p className="text-xs text-slate-300 font-normal mt-2 leading-relaxed">
-                  Based on Central Valley labor &amp; material standards. Final pricing depends on water chemistry balance, yard access, and permit specifications.
+                <p className="text-xs text-slate-600 font-normal mt-2 leading-[1.7]">
+                  Based on Central Valley labor &amp; material standards. Final pricing depends on water chemistry, yard access, and permit specifications.
                 </p>
               </div>
 
-              <div className="pt-4 pb-6 border-t border-white/10 space-y-2 text-xs text-slate-300">
+              <div className="pt-4 pb-6 border-t border-slate-200 space-y-2 text-xs text-slate-700">
                 <div className="flex items-center space-x-2">
-                  <ShieldCheck className="w-4 h-4 text-emerald-400 flex-shrink-0" />
+                  <ShieldCheck className="w-4 h-4 text-[#0284c7] flex-shrink-0" />
                   <span>CSLB #1023444 Licensed &amp; Insured Contractor</span>
                 </div>
                 <div className="flex items-center space-x-2">
-                  <Sparkles className="w-4 h-4 text-amber-400 flex-shrink-0" />
+                  <Sparkles className="w-4 h-4 text-[#0284c7] flex-shrink-0" />
                   <span>Free in-person consultation &amp; precise 3D quote</span>
                 </div>
               </div>
 
               {submitted ? (
-                <div className="bg-white/10 backdrop-blur-md rounded-2xl p-6 text-center border border-white/15">
-                  <div className="w-12 h-12 rounded-full bg-emerald-500/20 text-emerald-400 flex items-center justify-center mx-auto mb-3">
+                <div className="bg-[#e0f2fe] rounded-2xl p-6 text-center border border-sky-200">
+                  <div className="w-12 h-12 rounded-full bg-[#0284c7] text-white flex items-center justify-center mx-auto mb-3">
                     <CheckCircle2 className="w-6 h-6" />
                   </div>
-                  <h4 className="font-bold text-base text-white mb-1">Estimate Sent!</h4>
-                  <p className="text-xs text-slate-300">
+                  <h4 className="font-bold text-base text-[#0f172a] mb-1">Estimate Sent!</h4>
+                  <p className="text-xs text-slate-600">
                     Thank you {customerInfo.name || 'homeowner'}. Our team will contact you at {customerInfo.phone || 'your phone'} within 24 hours to schedule your free inspection.
                   </p>
                   <button
                     onClick={() => setSubmitted(false)}
-                    className="mt-4 text-xs text-sky-300 underline hover:text-white"
+                    className="mt-4 text-xs text-[#0284c7] underline font-semibold hover:text-[#0369a1]"
                   >
                     Recalculate or Edit Details
                   </button>
                 </div>
               ) : (
                 <form onSubmit={handleSubmit} className="space-y-3.5 pt-2">
-                  <h4 className="text-sm font-bold text-white tracking-wide">
+                  <h4 className="text-sm font-bold text-[#0f172a] tracking-wide">
                     Lock In This Estimate With a Free On-Site Inspection:
                   </h4>
 
@@ -239,7 +236,7 @@ export default function EstimateCalculator() {
                     placeholder="Your Full Name *"
                     value={customerInfo.name}
                     onChange={(e) => setCustomerInfo({ ...customerInfo, name: e.target.value })}
-                    className="w-full px-4 py-3 rounded-xl bg-white/10 border border-white/20 text-white placeholder-slate-400 text-xs focus:outline-none focus:ring-2 focus:ring-sky-400"
+                    className="w-full px-4 py-3 rounded-xl bg-[#f8fafc] border border-slate-200 text-[#0f172a] placeholder-slate-400 text-xs focus:outline-none focus:ring-2 focus:ring-[#0284c7] focus:bg-white"
                   />
 
                   <div className="grid grid-cols-2 gap-2">
@@ -249,7 +246,7 @@ export default function EstimateCalculator() {
                       placeholder="Phone Number *"
                       value={customerInfo.phone}
                       onChange={(e) => setCustomerInfo({ ...customerInfo, phone: e.target.value })}
-                      className="w-full px-4 py-3 rounded-xl bg-white/10 border border-white/20 text-white placeholder-slate-400 text-xs focus:outline-none focus:ring-2 focus:ring-sky-400"
+                      className="w-full px-4 py-3 rounded-xl bg-[#f8fafc] border border-slate-200 text-[#0f172a] placeholder-slate-400 text-xs focus:outline-none focus:ring-2 focus:ring-[#0284c7] focus:bg-white"
                     />
                     <input
                       type="text"
@@ -257,13 +254,13 @@ export default function EstimateCalculator() {
                       placeholder="City (e.g. Reedley) *"
                       value={customerInfo.city}
                       onChange={(e) => setCustomerInfo({ ...customerInfo, city: e.target.value })}
-                      className="w-full px-4 py-3 rounded-xl bg-white/10 border border-white/20 text-white placeholder-slate-400 text-xs focus:outline-none focus:ring-2 focus:ring-sky-400"
+                      className="w-full px-4 py-3 rounded-xl bg-[#f8fafc] border border-slate-200 text-[#0f172a] placeholder-slate-400 text-xs focus:outline-none focus:ring-2 focus:ring-[#0284c7] focus:bg-white"
                     />
                   </div>
 
                   <button
                     type="submit"
-                    className="w-full py-3.5 px-4 rounded-xl font-bold text-xs uppercase tracking-wider text-slate-900 bg-gradient-to-r from-amber-400 via-amber-300 to-yellow-400 hover:from-amber-300 hover:to-yellow-300 shadow-lg shadow-amber-500/20 transition-all flex items-center justify-center space-x-2 cursor-pointer"
+                    className="w-full py-3.5 px-4 rounded-xl font-bold text-xs uppercase tracking-wider text-white bg-[#0284c7] hover:bg-[#0369a1] shadow-md hover:shadow-lg transition-all duration-300 hover:-translate-y-[2px] flex items-center justify-center space-x-2 cursor-pointer"
                   >
                     <span>Request Official Written Quote</span>
                     <ArrowRight className="w-4 h-4" />
@@ -272,7 +269,7 @@ export default function EstimateCalculator() {
                   <div className="text-center pt-2">
                     <a
                       href={`tel:${BUSINESS_INFO.phoneRaw}`}
-                      className="inline-flex items-center space-x-1.5 text-xs text-sky-300 hover:text-white transition-colors"
+                      className="inline-flex items-center space-x-1.5 text-xs text-[#0284c7] hover:underline transition-colors font-medium"
                     >
                       <Phone className="w-3.5 h-3.5" />
                       <span>Prefer to call? (559) 393-7981</span>

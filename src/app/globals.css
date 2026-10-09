@@ -4,19 +4,27 @@
 
 @layer base {
   :root {
-    --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    --bg-primary: #ffffff;
+    --bg-secondary: #f8fafc;
+    --text-main: #0f172a;
+    --accent-blue: #0284c7;
+    --accent-light: #e0f2fe;
+    --font-sans: 'Plus Jakarta Sans', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   }
 
   html {
     scroll-behavior: smooth;
     font-family: var(--font-sans);
-    color: #334155;
-    background-color: #ffffff;
+    color: var(--text-main);
+    background-color: var(--bg-primary);
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
 
   body {
+    background-color: var(--bg-primary);
+    color: var(--text-main);
+    font-weight: 400;
     line-height: 1.7;
     letter-spacing: -0.011em;
   }
@@ -24,11 +32,12 @@
   p {
     line-height: 1.7;
     font-weight: 400;
+    color: #475569;
   }
 
   ::selection {
-    background-color: #bae6fd;
-    color: #0369a1;
+    background-color: var(--accent-light);
+    color: var(--accent-blue);
   }
 }
 
@@ -37,7 +46,7 @@
   width: 10px;
 }
 ::-webkit-scrollbar-track {
-  background: #f8fafc;
+  background: var(--bg-secondary);
 }
 ::-webkit-scrollbar-thumb {
   background: #cbd5e1;
@@ -51,25 +60,25 @@
 .bg-grid-pattern {
   background-size: 32px 32px;
   background-image: 
-    linear-gradient(to right, rgba(14, 165, 233, 0.05) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(14, 165, 233, 0.05) 1px, transparent 1px);
+    linear-gradient(to right, rgba(2, 132, 199, 0.04) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(2, 132, 199, 0.04) 1px, transparent 1px);
 }
 
 .bg-radial-glow {
-  background: radial-gradient(circle at 50% 0%, rgba(56, 189, 248, 0.12) 0%, rgba(240, 249, 255, 0) 70%);
+  background: radial-gradient(circle at 50% 0%, rgba(2, 132, 199, 0.08) 0%, rgba(224, 242, 254, 0) 70%);
 }
 
 .bg-glass {
-  background: rgba(255, 255, 255, 0.85);
+  background: rgba(255, 255, 255, 0.92);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
 }
 
 .bg-glass-card {
-  background: rgba(255, 255, 255, 0.92);
+  background: rgba(255, 255, 255, 0.95);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
-  border: 1px solid rgba(226, 232, 240, 0.8);
+  border: 1px solid rgba(226, 232, 240, 0.9);
 }
 
 /* 3D Transform Utilities */
@@ -79,4 +88,12 @@
 
 .perspective-1000 {
   perspective: 1000px;
+}
+
+/* Luxury Button & Action Hover Scaling */
+.btn-luxury-lift {
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.25s ease;
+}
+.btn-luxury-lift:hover {
+  transform: translateY(-3px);
 }

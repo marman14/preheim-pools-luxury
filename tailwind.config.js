@@ -8,6 +8,11 @@ module.exports = {
   theme: {
     extend: {
       colors: {
+        'bg-primary': '#ffffff',
+        'bg-secondary': '#f8fafc',
+        'text-main': '#0f172a',
+        'accent-blue': '#0284c7',
+        'accent-light': '#e0f2fe',
         pool: {
           50: '#f0f9ff',
           100: '#e0f2fe',
@@ -21,11 +26,6 @@ module.exports = {
           900: '#0c4a6e',
           950: '#082f49',
         },
-        navy: {
-          800: '#0f172a',
-          900: '#0b1120',
-          950: '#050811',
-        }
       },
       fontFamily: {
         sans: ['var(--font-sans)', 'system-ui', 'sans-serif'],
@@ -33,9 +33,10 @@ module.exports = {
         poppins: ['Poppins', 'system-ui', 'sans-serif'],
       },
       boxShadow: {
-        'glass': '0 8px 32px 0 rgba(14, 165, 233, 0.08)',
-        'glass-hover': '0 20px 40px -15px rgba(2, 132, 199, 0.2)',
-        '3d': '0 25px 50px -12px rgba(14, 165, 233, 0.25)',
+        'glass': '0 8px 32px 0 rgba(2, 132, 199, 0.06)',
+        'glass-hover': '0 20px 40px -15px rgba(2, 132, 199, 0.15)',
+        '3d': '0 20px 45px -10px rgba(2, 132, 199, 0.18)',
+        'subtle': '0 4px 20px 0 rgba(15, 23, 42, 0.04)',
       },
       animation: {
         'float': 'float 6s ease-in-out infinite',
@@ -45,7 +46,7 @@ module.exports = {
       keyframes: {
         float: {
           '0%, 100%': { transform: 'translateY(0px)' },
-          '50%': { transform: 'translateY(-10px)' },
+          '50%': { transform: 'translateY(-8px)' },
         },
         shimmer: {
           '0%': { backgroundPosition: '-200% 0' },

@@ -16,15 +16,15 @@ import FloatingActions from '@/components/FloatingActions';
 
 export default function HomePage() {
   return (
-    <div className="min-h-screen bg-white text-slate-800 flex flex-col selection:bg-sky-100 selection:text-sky-900">
-      {/* 1. Glassmorphic Navigation with Categorized Mega Dropdown */}
+    <div className="min-h-screen bg-white text-[#0f172a] flex flex-col selection:bg-[#e0f2fe] selection:text-[#0284c7]">
+      {/* 1. Glassmorphic Sticky Luxury Navigation with Categorized Mega Dropdown */}
       <Navbar />
 
       <main className="flex-grow">
-        {/* 2. Custom 3D Panoramic Hero Canvas */}
+        {/* 2. Custom 3D Panoramic Hero Canvas (Clean Light Luxury) */}
         <HeroLuxury />
 
-        {/* 3. Flagship Before & After Transformation Showcase */}
+        {/* 3. Flagship Before & After Transformation Showcase (Selma CA) */}
         <BeforeAfterCustom />
 
         {/* 4. Interactive 3D Perspective Services Suite (11 Core Offerings) */}
@@ -49,7 +49,7 @@ export default function HomePage() {
         <ContactSectionLuxury />
       </main>
 
-      {/* 11. Multi-Column Architectural Footer */}
+      {/* 11. Multi-Column Architectural Footer (Pure Light Luxury) */}
       <FooterLuxury />
 
       {/* 12. Pinned Left-Edge 5 Color-Coded Floating Action Buttons */}
